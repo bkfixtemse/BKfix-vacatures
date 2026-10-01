@@ -86,7 +86,6 @@
     .form-field textarea { resize: vertical; min-height: 120px; }
     .form-field input[type="file"] { padding: 10px 16px; cursor: pointer; color: rgba(255,255,255,0.6); }
     .form-field input[type="file"]::-webkit-file-upload-button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Poppins', sans-serif; font-size: 0.8rem; padding: 6px 14px; cursor: pointer; margin-right: 12px; }
-    .turnstile-wrap { margin: 20px 0; }
     .btn-submit { background: #fff; color: var(--black); font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; padding: 14px 32px; border: none; cursor: pointer; transition: opacity 0.15s; margin-top: 8px; }
     .btn-submit:hover { opacity: 0.88; }
     .form-note { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 12px; }
@@ -243,7 +242,7 @@
 
     <form action="https://formsubmit.co/info@bkfix.be" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Nieuwe sollicitatie — Monteur Gevelbekleding">
-      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://jobs.bkfix.be/bedankt.html">
 
@@ -277,10 +276,6 @@
       <div class="form-field">
         <label for="cv">CV uploaden (PDF of Word)</label>
         <input type="file" id="cv" name="CV" accept=".pdf,.doc,.docx">
-      </div>
-
-      <div class="turnstile-wrap">
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAACu_-m4bNadavryj" data-theme="dark"></div>
       </div>
 
       <button type="submit" class="btn-submit">Verstuur sollicitatie</button>
@@ -329,6 +324,5 @@
   </div>
 </footer>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
